@@ -1,0 +1,91 @@
+@use "styles/colors" as c;
+@mixin display() {
+  display: flex;
+  align-items: center;
+}
+.nav-bar {
+  @include display();
+  justify-content: space-around;
+  height: 90px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 1;
+  &__logo {
+    width: 146.05px;
+    height: 53px;
+    left: 20px;
+    top: 18px;
+  }
+  &__call {
+    @include display();
+  }
+  &__search {
+    @include display();
+    position: relative;
+  }
+  &__search-inp {
+    height: 35px;
+    width: 355px;
+    border-radius: 30px;
+    border: none;
+    background-color: #f1f1f5;
+    padding: 0 38px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  &__list{
+    @include display();
+  list-style: none;
+  height: 50px;
+  li{
+    padding: 1rem 1.5rem;
+    position: relative;
+    &:hover{
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.1)
+    }
+  }
+  }
+  &__logout{
+      width: 45px;
+      height: 45px;
+      background-color: rgba(0, 0, 0, 0.01);
+      border-radius: 50%;
+      position:relative;
+      &-icon{
+        top: 50%;
+        left: 50%;
+        transform: translate(65%, 55%);
+      }
+      &:hover{
+          background-color: rgba(0, 0, 0, 0.1)
+      }
+  }
+}
+.nav-bar-left {
+  @include display();
+  width: 45%;
+  justify-content: space-around;
+}
+
+.number-notif {
+  position: absolute;
+  background-color: c.$secondaryColor;
+  width: 16px;
+  height: 16px;
+  padding: 3px;
+  border: none;
+  border-radius: 46%;
+  text-align: center;
+  top: 4px;
+  right: 15px;
+  font-size: 11px;
+  &:focus {
+    outline: none;
+  }
+}
