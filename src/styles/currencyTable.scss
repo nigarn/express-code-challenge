@@ -1,0 +1,30 @@
+.currency-tab {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+
+    tr:nth-child(odd) {
+      background-color: #f6f6fa;
+      width: 27px;
+    }
+    th {
+      height: 62.5px;
+      font-size: 18px;
+      line-height: 18px;
+      background-color: #fff;
+    }
+    td {
+      height: 40px;
+      font-size: 16px;
+    }
+   
+    td > * {
+      vertical-align: middle;
+      padding-right: 15px;
+    }
+    th > * {
+      vertical-align: middle;
+      padding-right: 9px;
+    }
+  }

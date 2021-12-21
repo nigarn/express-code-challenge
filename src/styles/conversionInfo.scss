@@ -1,0 +1,40 @@
+.conversion-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 21px;
+  &__item {
+    width: 227px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .input-block,
+    select {
+      width: 227px;
+      height: 50px;
+      background: #f7f8fd;
+      border: 1px solid #dadae5;
+      box-sizing: border-box;
+      border-radius: 7px;
+      margin: 5px 0 26px 0;
+      padding: 15px 20px;
+      font-size: 16px;
+    
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+    input:focus,select:focus{
+        outline: none;
+    }
+
+    span {
+      font-size: 16px;
+      color: #616173;
+    }
+  }
+}
+

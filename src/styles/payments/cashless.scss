@@ -1,0 +1,52 @@
+@use "styles/colors.scss" as c;
+.cashless-sec {
+  background-color: #fff;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  margin-top: 21px;
+  &__info {
+    height: 60px;
+    background-color: #fff8ec;
+    border-top: 1px solid c.$primaryColor;
+    border-bottom: 1px solid c.$primaryColor;
+    p {
+      color: c.$redOrange;
+      font-size: 16px;
+      margin: 19px 30px;
+    }
+  }
+  &__exc {
+    padding: 21px 30px;
+  }
+  &__conversion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 27px;
+  }
+  &__conversion_item {
+    width: 48%;
+    margin-right: 20px;
+
+    p {
+      font-size: 18px;
+      font-weight: 600;
+      color: c.$mediumGray;
+    }
+  }
+  &__calc {
+    width: 800px;
+  }
+  &__calc-inp {
+    width: 152px;
+    border: none;
+    background-color: #fff;
+    margin: 5px 0 26px 0;
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+  input:focus,
+  select:focus {
+    outline: none;
+  }
+}

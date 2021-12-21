@@ -11,10 +11,9 @@ import notification from "svg/icons/notification.svg";
 import logout from "svg/icons/logout.svg"
 import { AiOutlineSearch } from "react-icons/ai";
 import "styles/header.scss";
+import { userInfo } from "data/userInfo";
 
-const notifCaunt = 9; //it will come from DB and change dynamically in the future
-const userName="Ilya Davidoff" //it will come from DB and change dynamically in the future
-const position="Apple Inc, Admin" //it will come from DB and change dynamically in the future
+const notifCaunt = 9; //it will be taken from DB and change dynamically in the future
 const Header = () => {
   return (
     <div className="nav-bar">
@@ -66,8 +65,8 @@ const Header = () => {
       </ul>
       </div>
     <div>
-    <p style={{marginBottom:'5px'}}><b>{userName}</b></p>
-    <p style={{fontWeight:400, color:"#616173",fontSize:'13px'}}>{position}</p>
+    <p style={{marginBottom:'5px'}}><b>{userInfo.name} {userInfo.surname}</b></p>
+    <p style={{fontWeight:400, color:"#616173",fontSize:'13px'}}>{userInfo.company}, {userInfo.position}</p>
     </div>
     <div className="nav-bar__logout">
     <img src={logout} alt="#" className="nav-bar__logout-icon"/>
