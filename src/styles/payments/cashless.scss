@@ -17,6 +17,7 @@
   }
   &__exc {
     padding: 21px 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   &__conversion {
     display: flex;
@@ -37,16 +38,29 @@
   &__calc {
     width: 800px;
   }
-  &__calc-inp {
+  &__calc-value {
     width: 152px;
-    border: none;
     background-color: #fff;
     margin: 5px 0 26px 0;
-    padding: 15px 20px;
+    padding: 15px 0px;
     font-size: 16px;
   }
   input:focus,
   select:focus {
     outline: none;
+  }
+  &__btn{
+    display: flex;
+    justify-content: center;
+    padding: 32px 0 32px 0;
+button{
+  width:165px;
+  height:64px;
+  background-color: c.$secondaryColor;
+  border-radius: 8px;
+  border:none;
+  text-align: center;
+}
+    
   }
 }

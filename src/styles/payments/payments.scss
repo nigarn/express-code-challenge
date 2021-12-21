@@ -3,6 +3,7 @@
   position: absolute;
   top: 112px;
   left: 241px;
+  padding-bottom: 150px;
   &__title {
     margin-top: 33px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -10,17 +11,19 @@
   &__title-list {
     list-style: none;
     display: flex;
-    
-
-    li {
-      margin-right: 48px;
-      color: rgba(177, 180, 190, 1);
-      padding-bottom: 12px;
-      border-bottom: 2px solid rgba(0, 0, 0, 0);
+  }
+  &__title-list-itm {
+    margin-right: 48px;
+    color: rgba(177, 180, 190, 1);
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    &:hover {
+      cursor: pointer;
     }
-  
-    li:active{
-        border-bottom: 2px solid rgba(0, 0, 0, 1);
-    }
+   
+  }
+  &__title-list-itm-active {
+    color: rgba(0, 0, 0, 1);
+    border-bottom: 2px solid rgba(0, 0, 0, 1);
   }
 }

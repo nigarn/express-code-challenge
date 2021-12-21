@@ -1,4 +1,5 @@
 .conversion-info {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -20,21 +21,65 @@
       margin: 5px 0 26px 0;
       padding: 15px 20px;
       font-size: 16px;
-    
     }
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
       appearance: none;
       margin: 0;
     }
-    input:focus,select:focus{
-        outline: none;
+    input:focus,
+    select:focus {
+      outline: none;
     }
 
     span {
       font-size: 16px;
       color: #616173;
+      position: relative;
+      img {
+        position: absolute;
+        top: 15%;
+        right: 23%;
+      }
     }
   }
 }
+.select-block {
+  position: relative;
 
+  select {
+    appearance: none;
+    padding-left: 119px;
+    color: #616173;
+  }
+  label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 16px;
+  }
+}
+.slc-arw-acc {
+  appearance: none;
+  img {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+  }
+}
+.slc-arw-cur {
+  appearance: none;
+  img {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+  }
+}
+.slc-arw-com {
+  appearance: none;
+  img {
+    position: absolute;
+    right: 176px;
+    bottom: 49px;
+  }
+}

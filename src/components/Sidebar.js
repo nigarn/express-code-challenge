@@ -20,7 +20,7 @@ const Sidebar = () => {
           <p>Dashboard</p>
         </li>
         <li>
-          <div className="sidebar__list-icon">
+          <div className="sidebar__list-icon sidebar__list-icon-active">
             <img src={payment} alt="#" />
           </div>
           <p>Payment</p>

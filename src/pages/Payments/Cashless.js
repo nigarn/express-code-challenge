@@ -3,8 +3,12 @@ import CurrencyTable from "components/CurrencyTable";
 import "styles/payments/cashless.scss";
 import "styles/conversionInfo.scss";
 import { Account, ConversionInfo } from "components/ConversionInfo";
+import warning from "svg/warning.svg";
+import arrow from "svg/icons/arrow.svg";
 
 const Cashless = () => {
+  const commission = 180; //it will change dynamically in the future
+  const exchange = "₼";
   return (
     <div className="cashless-sec">
       <CurrencyTable />
@@ -31,20 +35,28 @@ const Cashless = () => {
               <span>Commission holding account</span>
               <Account />
             </div>
-            <div className="conversion-info__item">
-              <span>Commission amount</span>
-              <input
-                className="cashless-sec__calc-inp"
-                type="number"
-                value="18m"
-                readOnly
-              />
+            <div
+              className="conversion-info__item"
+              style={{ marginLeft: "35px" }}
+            >
+              <span>
+                Commission amount <img src={warning} alt="#" />
+              </span>
+              <div className="cashless-sec__calc-value">
+                <p>
+                  {commission} {exchange}
+                </p>
+              </div>
             </div>
-            <div className="conversion-info__item" style={{ width: "646px" }}>
+            <div
+              className="conversion-info__item  slc-arw-com"
+              style={{ width: "646px" }}
+            >
               <span>Payment purpose</span>
+              <img src={arrow} />
               <select
-                className="conversion-info__item"
-                style={{ width: "646px" }}
+                className="conversion-info__item slc-arw-com"
+                style={{ width: "646px", color: "#616173" }}
               >
                 <option value={"lorem"}>ex .Lorem, ipsum dolor.</option>
                 <option value={"lorem"}>ex .Lorem, ipsum dolor.</option>
@@ -53,6 +65,9 @@ const Cashless = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="cashless-sec__btn">
+        <button>Convert</button>
       </div>
     </div>
   );
