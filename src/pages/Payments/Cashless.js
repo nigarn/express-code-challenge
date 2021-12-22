@@ -53,7 +53,7 @@ const Cashless = () => {
               style={{ width: "646px" }}
             >
               <span>Payment purpose</span>
-              <img src={arrow} />
+              <img src={arrow} alt="#"/>
               <select
                 className="conversion-info__item slc-arw-com"
                 style={{ width: "646px", color: "#616173" }}

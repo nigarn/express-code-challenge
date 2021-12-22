@@ -2,7 +2,6 @@ import React from "react";
 import "styles/currencyTable.scss";
 import { currency } from "data/currency";
 
-
 const CurrencyTable = () => {
   return (
     <table className="currency-tab">
@@ -20,13 +19,13 @@ const CurrencyTable = () => {
           </th>
 
           {currency.map((item) => {
-            if (item.name !== "AZN") {
-              return (
+            return (
+              item.name !== "AZN" && (
                 <th key={item.name}>
                   <img src={item.src} alt="#" /> {item.name}
                 </th>
-              );
-            }
+              )
+            );
           })}
         </tr>
       </thead>
@@ -42,13 +41,13 @@ const CurrencyTable = () => {
             Buy Price
           </td>
           {currency.map((item) => {
-            if (item.name !== "AZN") {
-              return (
+            return (
+              item.name !== "AZN" && (
                 <td key={item.name}>
                   <img src={item.incIcon} alt="#" /> {item.buyPrice}
                 </td>
-              );
-            }
+              )
+            );
           })}
         </tr>
         <tr>
@@ -62,14 +61,14 @@ const CurrencyTable = () => {
             Sell Price
           </td>
           {currency.map((item) => {
-            if (item.name !== "AZN") {
-              return (
+            return (
+              item.name !== "AZN" && (
                 <td key={item.name}>
                   <img src={item.decIcon} alt="#" />
                   {item.sellPrice}
                 </td>
-              );
-            }
+              )
+            );
           })}
         </tr>
       </tbody>

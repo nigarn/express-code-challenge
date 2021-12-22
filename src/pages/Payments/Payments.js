@@ -20,7 +20,7 @@ const Payments = () => {
         </ul>
       </div>
       <Cashless />
-     
+
     </div>
   );
 };

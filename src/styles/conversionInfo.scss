@@ -40,6 +40,9 @@
         position: absolute;
         top: 15%;
         right: 23%;
+        &:hover{
+          cursor: pointer;
+        }
       }
     }
   }
